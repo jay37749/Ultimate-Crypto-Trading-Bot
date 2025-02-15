@@ -19,6 +19,8 @@
 
 - Welcome to the Ultimate Crypto Trading Bot! This bot is designed to automate cryptocurrency trading using a hybrid strategy that combines XGBoost (machine learning) and PPO (reinforcement learning). It supports live trading, backtesting, and periodic retraining of models. Below, you'll find everything you need to set up, configure, and run the bot.
 
+________________________________________
+
 **Table of Contents**
 
 *Overview*
@@ -47,6 +49,8 @@ Prerequisites
 
 *License*
 
+________________________________________
+
 **Overview**
 
 The bot is built to trade on Binance Futures and uses the following key components:
@@ -63,6 +67,7 @@ Backtesting: Evaluates the strategy on historical data.
 
 Real-Time Trading: Executes trades in real-time using WebSocket.
 
+________________________________________
 
 **Prerequisites**
 
@@ -92,16 +97,16 @@ vaderSentiment
 
 You can install the required libraries using the following command:
 
-Copy
+*Copy*
 
 pip install pandas numpy binance xgboost stable-baselines3 scikit-learn matplotlib vaderSentiment
 
 
-Installation
+**Installation**
 
 Clone the Repository:
 
-Copy
+*Copy*
 
 git clone https://github.com/your-repo/ultimate-crypto-trading-bot.git
 
@@ -116,13 +121,13 @@ Download Pre-Trained Models:
 
 Ensure the trained_xgboost_model.pkl and trained_rl_model.zip files are in the project directory. These are the pre-trained models for XGBoost and PPO, respectively.
 
-Configuration
+**Configuration**
 
 The bot's configuration is stored in config.json. Below are the key parameters:
 
 API Credentials:
 
-Copy
+*Copy*
 
 "api_key": "your_api_key",
 
@@ -130,13 +135,13 @@ Copy
 
 Trading Pairs:
 
-Copy
+*Copy*
 
 "trading_pairs": ["BTCUSDT", "ETHUSDT"]
 
 Leverage and Risk Settings:
 
-Copy
+*Copy*
 
 "default_leverage": 20,
 
@@ -152,7 +157,7 @@ Copy
 
 Model Settings:
 
-Copy
+*Copy*
 
 "hybrid_settings": {
   "enable_hybrid_mode": true,
@@ -160,15 +165,15 @@ Copy
   "rl_weight": 0.4
 }
 
-Running the Bot
+**Running the Bot**
 
 The bot can be run in several modes. Use the following commands to start the bot:
 
-Live Trading Mode
+**Live Trading Mode**
 
 To run the bot in live trading mode:
 
-Copy
+*Copy*
 
 python run_bot.py --mode=live
 
@@ -177,12 +182,12 @@ This mode connects to Binance via WebSocket and executes trades in real-time.
 Ensure your API credentials are correctly configured in config.json.
 
 
-Backtesting Mode
+**Backtesting Mode**
 
 To run the bot in backtesting mode:
 
 
-Copy
+*Copy*
 
 python run_bot.py --mode=backtest
 
@@ -192,11 +197,11 @@ Backtesting results are logged and visualized using an equity curve.
 
 ![image alt](https://github.com/jay37749/Ultimate-Crypto-Trading-Bot/blob/97455af8c1a2137a574490c0edc8d70a31ca23b3/trading_bot/BTCUSDT%2035K%2023RD%20JAN%202025%2060%20MONTHS.png)
 
-Retrain XGBoost Model
+**Retrain XGBoost Model**
 
 To retrain the XGBoost model with the latest data:
 
-Copy
+*Copy*
 
 python run_bot.py --mode=retrain_xgboost
 
@@ -204,11 +209,11 @@ This mode fetches recent historical data and retrains the XGBoost model.
 
 The retrained model is saved as trained_xgboost_model.pkl.
 
-Live RL Learning Mode
+**Live RL Learning Mode**
 
 To enable live reinforcement learning:
 
-Copy
+*Copy*
 
 python run_bot.py --mode=train_rl
 
@@ -219,21 +224,23 @@ The updated model is saved as trained_rl_model.zip.
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/X7X612R0JE)
 
-Risk Management
+________________________________________
+
+**Risk Management**
 
 The bot includes robust risk management features:
 
-Position Sizing: Calculates the position size based on risk percentage and ATR (Average True Range).
+1. Position Sizing: Calculates the position size based on risk percentage and ATR (Average True Range).
 
-Stop-Loss and Take-Profit: Automatically sets stop-loss and take-profit levels based on risk and reward factors.
+2. Stop-Loss and Take-Profit: Automatically sets stop-loss and take-profit levels based on risk and reward factors.
 
-Risk-to-Reward Ratio: Skips trades that do not meet the minimum risk-to-reward ratio (configurable in config.json).
+3. Risk-to-Reward Ratio: Skips trades that do not meet the minimum risk-to-reward ratio (configurable in config.json).
 
 ![image alt](https://github.com/jay37749/Ultimate-Crypto-Trading-Bot/blob/672bcf077b8bb2f4c1c488769248080ab29f97ae/trading_bot/ETHUSDT%2059K%2023RD%20JAN%202025.png)
 
-Troubleshooting
+**Troubleshooting**
 
-Common Issues
+*Common Issues*
 
 API Errors:
 
@@ -255,7 +262,7 @@ Error Logs
 
 Errors are logged in error_log.txt for debugging.
 
-Contributing
+**Contributing**
 
 Contributions are welcome! If you'd like to improve the bot, please follow these steps:
 
@@ -265,18 +272,20 @@ Create a new branch for your feature or bugfix.
 
 Submit a pull request with a detailed description of your changes.
 
-License
+**License**
 
 This project is licensed under the MIT License. See the LICENSE file for details.
 
-Support
+**Support**
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/X7X612R0JE)
+
+________________________________________
 
 For any questions or issues, please open an issue on the GitHub repository or contact the maintainers.
 
 Happy trading! 🚀
-
+________________________________________
 <h3 align="left">Connect with me:</h3>
 <p align="left">
 </p>
