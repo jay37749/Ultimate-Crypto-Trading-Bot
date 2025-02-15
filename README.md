@@ -55,17 +55,17 @@ ________________________________________
 
 The bot is built to trade on Binance Futures and uses the following key components:
 
-#XGBoost Model#: A machine learning model trained to predict buy/sell signals.
+1. **XGBoost Model**: A machine learning model trained to predict buy/sell signals.
 
-PPO Model: A reinforcement learning model that adapts to market conditions.
+2. **PPO Model**: A reinforcement learning model that adapts to market conditions.
 
-Hybrid Strategy: Combines signals from both XGBoost and PPO for decision-making.
+3. **Hybrid Strategy**: Combines signals from both XGBoost and PPO for decision-making.
 
-Risk Management: Implements stop-loss, take-profit, and position sizing.
+4. **Risk Management**: Implements stop-loss, take-profit, and position sizing.
 
-Backtesting: Evaluates the strategy on historical data.
+5. **Backtesting**: Evaluates the strategy on historical data.
 
-Real-Time Trading: Executes trades in real-time using WebSocket.
+6. **Real-Time Trading**: Executes trades in real-time using WebSocket.
 
 ________________________________________
 
@@ -73,27 +73,28 @@ ________________________________________
 
 Before running the bot, ensure you have the following installed:
 
-Python 3.8 or higher
+1. Python 3.8 or higher
 
-Binance API Key and Secret: Obtain these from your Binance account.
+2. Binance API Key and Secret: Obtain these from your Binance account.
 
 Required Python Libraries:
 
-pandas
+a) pandas
 
-numpy
+b) numpy
 
-binance
+c) binance
 
-xgboost
+d) xgboost
 
-stable-baselines3
+e) stable-baselines3
 
-scikit-learn
+f) scikit-learn
 
-matplotlib
+g) matplotlib
 
-vaderSentiment
+h) vaderSentiment
+
 
 You can install the required libraries using the following command:
 
@@ -101,6 +102,7 @@ You can install the required libraries using the following command:
 
 pip install pandas numpy binance xgboost stable-baselines3 scikit-learn matplotlib vaderSentiment
 
+________________________________________
 
 **Installation**
 
@@ -113,9 +115,9 @@ git clone https://github.com/your-repo/ultimate-crypto-trading-bot.git
 
 Set Up Configuration:
 
-Open the config.json file and replace the api_key and api_secret with your Binance API credentials.
+1. Open the config.json file and replace the api_key and api_secret with your Binance API credentials.
 
-Configure the trading pairs, leverage, risk settings, and other parameters as needed.
+2. Configure the trading pairs, leverage, risk settings, and other parameters as needed.
 
 Download Pre-Trained Models:
 
@@ -165,6 +167,8 @@ Model Settings:
   "rl_weight": 0.4
 }
 
+________________________________________
+
 **Running the Bot**
 
 The bot can be run in several modes. Use the following commands to start the bot:
@@ -177,9 +181,9 @@ To run the bot in live trading mode:
 
 python run_bot.py --mode=live
 
-This mode connects to Binance via WebSocket and executes trades in real-time.
+a) This mode connects to Binance via WebSocket and executes trades in real-time.
 
-Ensure your API credentials are correctly configured in config.json.
+b) Ensure your API credentials are correctly configured in config.json.
 
 
 **Backtesting Mode**
@@ -191,9 +195,9 @@ To run the bot in backtesting mode:
 
 python run_bot.py --mode=backtest
 
-This mode evaluates the strategy on historical data and generates performance metrics (e.g., Sharpe ratio, max drawdown).
+a) This mode evaluates the strategy on historical data and generates performance metrics (e.g., Sharpe ratio, max drawdown).
 
-Backtesting results are logged and visualized using an equity curve.
+b) Backtesting results are logged and visualized using an equity curve.
 
 ![image alt](https://github.com/jay37749/Ultimate-Crypto-Trading-Bot/blob/97455af8c1a2137a574490c0edc8d70a31ca23b3/trading_bot/BTCUSDT%2035K%2023RD%20JAN%202025%2060%20MONTHS.png)
 
@@ -205,9 +209,9 @@ To retrain the XGBoost model with the latest data:
 
 python run_bot.py --mode=retrain_xgboost
 
-This mode fetches recent historical data and retrains the XGBoost model.
+a) This mode fetches recent historical data and retrains the XGBoost model.
 
-The retrained model is saved as trained_xgboost_model.pkl.
+b) The retrained model is saved as trained_xgboost_model.pkl.
 
 **Live RL Learning Mode**
 
@@ -218,9 +222,9 @@ To enable live reinforcement learning:
 python run_bot.py --mode=train_rl
 
 
-This mode allows the PPO model to learn from real-time market data.
+a) This mode allows the PPO model to learn from real-time market data.
 
-The updated model is saved as trained_rl_model.zip.
+b) The updated model is saved as trained_rl_model.zip.
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/X7X612R0JE)
 
@@ -238,45 +242,54 @@ The bot includes robust risk management features:
 
 ![image alt](https://github.com/jay37749/Ultimate-Crypto-Trading-Bot/blob/672bcf077b8bb2f4c1c488769248080ab29f97ae/trading_bot/ETHUSDT%2059K%2023RD%20JAN%202025.png)
 
+________________________________________
+
 **Troubleshooting**
 
 *Common Issues*
 
 API Errors:
 
-Ensure your Binance API key and secret are correct.
+1. Ensure your Binance API key and secret are correct.
 
-Check if your IP is whitelisted on Binance.
+2. Check if your IP is whitelisted on Binance.
 
 Data Fetching Errors:
 
-Ensure you have a stable internet connection.
+1. Ensure you have a stable internet connection.
 
-If historical data fetching fails, try reducing the lookback period.
+2. If historical data fetching fails, try reducing the lookback period.
 
 Model Loading Errors:
 
 Ensure the pre-trained models (trained_xgboost_model.pkl and trained_rl_model.zip) are in the correct directory.
 
-Error Logs
+Error Logs:
 
 Errors are logged in error_log.txt for debugging.
+
+________________________________________
 
 **Contributing**
 
 Contributions are welcome! If you'd like to improve the bot, please follow these steps:
 
-Fork the repository.
+1. Fork the repository.
 
-Create a new branch for your feature or bugfix.
+2. Create a new branch for your feature or bugfix.
 
-Submit a pull request with a detailed description of your changes.
+3. Submit a pull request with a detailed description of your changes.
+
+________________________________________
 
 **License**
 
 This project is licensed under the MIT License. See the LICENSE file for details.
 
+________________________________________
+
 **Support**
+If you found this project interesting, your support toward developing more worthwhile projects will be greatly appreciated. Here is the fun part -  you get to support with any amount you'd like. THANK YOU!
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/X7X612R0JE)
 
