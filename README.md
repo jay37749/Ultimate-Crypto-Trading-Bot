@@ -15,6 +15,8 @@
 
 - 📫 How to reach me **jay37749@gmail.com**
 
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/X7X612R0JE)
+
 - Welcome to the Ultimate Crypto Trading Bot! This bot is designed to automate cryptocurrency trading using a hybrid strategy that combines XGBoost (machine learning) and PPO (reinforcement learning). It supports live trading, backtesting, and periodic retraining of models. Below, you'll find everything you need to set up, configure, and run the bot.
 
 **Table of Contents**
@@ -215,6 +217,8 @@ This mode allows the PPO model to learn from real-time market data.
 
 The updated model is saved as trained_rl_model.zip.
 
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/X7X612R0JE)
+
 Risk Management
 
 The bot includes robust risk management features:
@@ -266,6 +270,8 @@ License
 This project is licensed under the MIT License. See the LICENSE file for details.
 
 Support
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/X7X612R0JE)
 
 For any questions or issues, please open an issue on the GitHub repository or contact the maintainers.
 
